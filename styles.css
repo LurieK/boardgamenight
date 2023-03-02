@@ -1,0 +1,128 @@
+/* Making images toggle to certain percentages in terms of width after a certain minimum screen size.
+Using a @media rule to change page layout and behavior based on size breakpoints.
+Employing responsive units em and rem to size and space elements with width and padding. */
+
+body{
+    background-color: rgba(239, 240, 241, 0.628);
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    background-color: darkred;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right:0;
+    top:  0;
+
+}
+header img {
+    width: 5%;
+    margin-left: .5rem;
+}
+
+header ul {
+    display:flex;
+    list-style-type: none;
+    align-items: center;
+    
+
+}
+li a{
+    margin-right: 10px;
+    text-decoration: none;
+    color:black;
+    
+}
+    
+
+.title {
+    background-image: url(./img/cards\ and\ dice.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 31.25rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 11px 5px 17px black;
+    font-size: 4rem;
+    margin: 0;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.65);
+}
+
+@media (max-width: 675px){
+    .title {
+        font-size: 3rem;
+        height:20rem;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .title {
+        font-size: 2rem;
+    }
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow:hidden;
+    margin-top: 1em;
+    
+
+   
+}
+
+.details img {
+    width: 30%;
+    height: auto;
+    margin-right: 2em;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.65);
+
+
+}
+
+@media (max-width: 675px){
+    .details {
+        font-size: .75rem;
+        margin-top: 1em;
+        height: 20rem;
+       
+    }
+    
+}
+
+@media (max-width: 500px){
+    .details {
+        font-size: .50rem;
+        margin-top: 1em;
+    }
+}
+
+/* redesign to make this four images with their own boarder */
+.games{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.games h2{
+    align-self: center;
+    font-size: 2em;
+}
+
+.game-list img {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.game-list {
+    display: flex;
+    overflow: hidden;
+}
