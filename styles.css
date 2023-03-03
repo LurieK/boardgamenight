@@ -9,11 +9,10 @@ header {
     display:flex;
     justify-content: space-between;
     background-color: darkred;
+    color: white;
     width: 100%;
     margin: 0;
-    left: 0;
-    right:0;
-    top:  0;
+    
 
 }
 header img {
@@ -54,15 +53,23 @@ li a{
 
 @media (max-width: 675px){
     .title {
-        font-size: 3rem;
+        font-size: 3.5rem;
         height:20rem;
+    }
+    header img{
+        width: 10%;
+        margin-left: .5rem;
     }
     
 }
 
 @media (max-width: 500px){
     .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    header img{
+        width: 10%;
+        margin-left: .5rem;
     }
 }
 
@@ -70,9 +77,11 @@ li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-color: white;
     overflow:hidden;
     margin-top: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     
 
    
@@ -98,9 +107,8 @@ li a{
 }
 
 @media (max-width: 500px){
-    .details {
-        font-size: .50rem;
-        margin-top: 1em;
+    details img {
+        display: none;
     }
 }
 
@@ -108,6 +116,7 @@ li a{
 .games{
     display: flex;
     flex-direction: column;
+    
 
 }
 
@@ -116,13 +125,56 @@ li a{
     font-size: 2em;
 }
 
+.games h3 {
+    align-self: center;
+    font-style: italic;
+
+}
+
 .game-list img {
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.65);
+    
+    
 }
 
 .game-list {
     display: flex;
-    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:0 auto;
+    width: 30rem;
+
+}
+
+@media (max-width: 675px){
+    .game-list img {
+        width: calc(40% - 10px);
+        margin-bottom: 15px;
+        margin-right: 15px;
+       
+    }
+    
+}
+
+@media (max-width: 500px){
+    .game-list img {
+        width: calc(40% - 5px);
+        margin-bottom: 10px;
+        margin-right: 0px;
+        
+    }
+
+  
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+
+    background-color: darkred;
+    color: white;
 }
